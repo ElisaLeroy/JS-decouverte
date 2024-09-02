@@ -11,55 +11,56 @@
 
         /* Section 1 */   
 
-        var name = "Joe";
+        var name = "Joe";   //on déclare une variable de dont le nom est "name" et la valeur est une string "joe"
         var city = 'London';
         var age = 32;
         var isRed = true;
         var isOld = age > 80;
 
-        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];   //on déclare une variable de dont le nom est "previousJobs" et la valeur est un tableau
 
-        function info(height, weight) {
-            if (height > 180) {
-                console.log('Vous êtes grand');
+        function info(height, weight) {         //on déclare une fonction "info" qui prend en paramètre deux variables : name et weight
+            if (height > 180) {         //condition : si la variable "height" est strictement supérieur à 180, alors on effectue le traitement contenu entre les crochets
+                console.log('Vous êtes grand'); // on affiche une string
             }
             if (weight < 0) {
                 console.log('oups, there is a problem');
             } else if ( weight < 15) {
                 console.log('Are you that slim ?')
-            } else {
+            } else {        //si aucune des conditions précédente n'est remplie, alors on exécute le traitement suivant
                 console.log('Good !')
             }
         }
 
-        info(165, 45);
+        info(165, 45);  //on appel la fonction info en lui passant 165 et 45 en paramètres (paramètres en dur)
 
-        var myHeight = 175;
+        var myHeight = 175; //on déclare une variable ...
         var myWeight = 86;
 
-        info(myHeight, myWeight);
+        info(myHeight, myWeight);   //on appel la fonction info en lui passant 2 variables en paramètres
 
-        info(myHeight + 15, myWeight - 100);
+        info(myHeight + 15, myWeight - 100); //on appel la fonction info en lui passant 2 variables (modifiées) en paramètres
 
-        function toUpper(variable) {
-            return variable.toUpperCase();
+        function toUpper(variable) {        //on créé la fonction toUpper qui prend 1 paramètre
+            return variable.toUpperCase();  //cette fonction retourne le variable à la quelle on applique la méthode (classe) toUpperCase
         }
 
-        var upperName = toUpper(name);
+        var upperName = toUpper(name);  //variable upperName qui a pour valeur la variable name passé en paramètre de la fonction toUpper
 
-        for (i = 0; i < 3; i = i + 1) {
-            console.log(previousJobs[i]);
+        for (i = 0; i < 3; i = i + 1) {     //itération for : on déclare la variable "i" qui vaut 0 ; condition : tant que i est strictement inférieur à 3 ; on incrémente i de 1
+            console.log(previousJobs[i]);   //tant que la condition de la boucle est vrai on exécute le traitement entre les crochets : on affiche la "ligne" "i" du tacleau previousJobs
         }
 
         /* Section 2: */
-
+        console.log(city);
         // afficher la ville dans laquele Joe vit.     
 
+        console.log(isRed);
         // afficher si Joe est roux ou pas.
 
         /* Section 3 */
 
-        // console.log(myVariable);
+        console.log(myVariable); //n'existe pas 
 
         </script>
 
