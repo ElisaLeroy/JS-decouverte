@@ -5,9 +5,8 @@ let playerChoice = getPlayerchoice(playerInput);
 let computerChoice = getComputerChoice();
 
 
-
 function getPlayerchoice(playerInput) {
-    if (playerInput === 'rock' || 'paper' || 'scissors') {
+    if (playerInput === 'rock' || 'paper' || 'scissors' || 'bomb') {
         return playerInput;
     } else {
         console.log('Error : wrong input')
@@ -32,12 +31,32 @@ function getComputerChoice() {
 }
 
 function findWinner(playerChoice, computerChoice) {
-    if (playerChoice === computerChoice){
-        return 'Tied';
+    if (playerChoice === 'bomb') {
+        return 'Won';
     }
-    if (playerChoice === 'rock'){
-        if(computerChoice === 'paper'){
-            return 'lost'
-        }
+    if (playerChoice === computerChoice) {
+        return 'Tied'
+    } else if (playerChoice === 'rock' && computerChoice === 'scissors') {
+        return 'Won'
+    } else if (playerChoice === 'rock' && computerChoice === 'paper') {
+        return 'Lost'
+    } else if (playerChoice === 'paper' && computerChoice === 'rock') {
+        return 'Won'
+    } else if (playerChoice === 'paper' && computerChoice === 'scissors') {
+        return 'Lost'
+    } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
+        return 'Won'
+    } else if (playerChoice === 'scissors' && computerChoice === 'rock') {
+        return 'Lost'
     }
 }
+
+function playGame(){
+    let uChoice = getPlayerchoice(playerInput);
+    let computerChoice = getComputerChoice();
+    console.log('User : '+uChoice);
+    console.log('Computer : '+computerChoice);
+    console.log(findWinner(uChoice, computerChoice));
+}
+
+playGame();
