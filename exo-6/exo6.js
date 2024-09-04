@@ -72,6 +72,7 @@ let getTeamPoints = () => {
     let totalPoints=0;
     for (const game of team.games) {
         totalPoints += game.teamPoints;
+        //totalPoints = totalPoints + game.teamPoints;
     }
     return totalPoints;
 }
