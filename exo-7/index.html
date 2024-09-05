@@ -12,9 +12,17 @@
 
 <div id="sort">
     <form action="" method="post">
-        <label>Recherche de produit par type</label>
+        <label for="typeChoice">Recherche de produit par type</label>
         <input type="text" name="typeChoice" id="typeChoice">
-        <input onclick="sortElementsByType()" id="submit" type="button" value="Rechercher">
+        <input onclick="displayElementsByType()" id="submit" type="button" value="Rechercher">
+        <br/>
+        <input type="radio" name="stock" id="inStock" onClick="displayInStockProducts()" >
+        <label for="inStock">Produits en stock</label>
+        <input type="radio" name="stock" id="outOfStock" onClick="displayOutOfStockProducts()">
+        <label for="outOfStock">Produits en rupture de stock</label>
+        <br/>
+        <input type="button" name="stock" id="all" value="Voir tous les produits" onClick="displayProducts(jsonDatas)">
+
     </form>
 </div>
 
@@ -24,8 +32,8 @@
 
 
 
-<script src="datas.js"></script>
-<script src="exo7.js"></script>
+<script  src="datas.js"></script>
+<script defer src="exo7.js"></script> <!--ici, defer permet de dire au navigateur qu'il faut attendre que tout ce qu'il y a au dessus soit charger pour charger ce script -->
 </body>
 
 </html>
